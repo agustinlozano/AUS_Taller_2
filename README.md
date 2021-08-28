@@ -1,4 +1,4 @@
-## Mis programas en lenguaje C - Segundo cuatrimestre
+## Mis programas en lenguaje C
 
   Este repositorio contiene varios de mis programas hechos en C,
   los cuales he ido haciendo a medida que avanza el curso en el
