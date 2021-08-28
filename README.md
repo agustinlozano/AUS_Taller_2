@@ -1,0 +1,10 @@
+## Mis programas en lenguaje C - Segundo cuatrimestre
+
+  Este repositorio contiene varios de mis programas hechos en C,
+  los cuales he ido haciendo a medida que avanza el curso en el
+  cuatrimestre.
+
+  Este curso está dentro de la materia **taller de programacion II**,
+  la cual forma parte del plan de estudios en mi carrera.
+
+### [UNR](https://unr.edu.ar/) - [Instituto Politécnico Superior de Rosario](https://www.ips.edu.ar/).
