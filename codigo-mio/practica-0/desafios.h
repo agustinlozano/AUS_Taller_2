@@ -21,7 +21,11 @@ void rellenarNumerosImpares(int arreglo[]);
 
 /* 5 */
 void resuelveDesafioCinco(void);
-
+void mostrarPunteroEntero(int *puntero, int posiciones);
+void sumarElementos(int *p, int posiciones);
+void restarElementos(int *p, int posiciones);
+void multiplicarElementos(int *p, int posiciones);
+void dividirElementos(int *p, int posiciones);
 
 /* tools */
 void imprimirArreglo(int arreglo[], int length);
