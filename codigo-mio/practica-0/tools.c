@@ -7,7 +7,7 @@ void imprimirArreglo(int arreglo[], int length) {
             printf("%d}\n", arreglo[l]);
             break;
         }
-        printf("%d", arreglo[l]);
+        printf("%d, ", arreglo[l]);
     }
 }
 

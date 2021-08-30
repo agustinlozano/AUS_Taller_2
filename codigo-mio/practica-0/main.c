@@ -9,7 +9,9 @@ int main(void)
     /* 4 */
     //resuelveDesafioCuatro();
     /* 5 */
-    resuelveDesafioCinco();
+    //resuelveDesafioCinco();
+    /* 5 */
+    resuelveDesafioSeis();
 
     return EXIT_SUCCESS;
 }
