@@ -6,7 +6,7 @@
 #include <string.h>
 
 int resuleveDesafioSiete(void) {
-    char *frase = ingreso();
+    char *frase = ingresarFrase();
 
     if (frase == NULL) {
         return EXIT_FAILURE;
@@ -19,7 +19,7 @@ int resuleveDesafioSiete(void) {
     return EXIT_SUCCESS;
 }
 
-char * ingreso(void) {
+char * ingresarFrase(void) {
     char frase[256];
     int longitudFrase;
 
@@ -50,7 +50,8 @@ char * invertirFrase(char * frase) {
 
     printf("Frase invertida: %s\n", fraseInvertida); // <-- Esta linea no me muestra la frase cuando corro el programa
                                                      // aparece lo siguiente:
-                                                     //     $> Frase invertida: 
+                                                     //     $> Frase invertida:
 
     return fraseInvertida;
 }
+
