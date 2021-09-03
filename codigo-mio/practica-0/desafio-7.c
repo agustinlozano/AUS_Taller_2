@@ -48,7 +48,9 @@ char * invertirFrase(char * frase) {
         //printf("\n%c", *(frase + i));
     }
 
-    printf("Frase invertida: %s\n", fraseInvertida);
+    printf("Frase invertida: %s\n", fraseInvertida); // <-- Esta linea no me muestra la frase cuando corro el programa
+                                                     // aparece lo siguiente:
+                                                     //     $> Frase invertida: 
 
     return fraseInvertida;
 }
