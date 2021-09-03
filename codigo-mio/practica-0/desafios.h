@@ -31,6 +31,11 @@ void dividirElementos(int *p, int posiciones);
 void resuelveDesafioSeis(void);
 void ordenarArreglo(int arreglo[], int posiciones);
 
+/* 7 */
+int resuleveDesafioSiete(void);
+char * ingreso(void);
+char * invertirFrase(char * frase);
+
 /* tools */
 void imprimirArreglo(int arreglo[], int length);
 
