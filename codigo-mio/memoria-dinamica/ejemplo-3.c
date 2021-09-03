@@ -17,10 +17,10 @@ int main(void) {
     scanf(" %d", &columnas);
 
     //Se crea la matriz de forma dinamica
-    m = (int **)malloc(sizeof(int *)*filas);
+    m = (int **)malloc(sizeof(int *) * filas);
 
     for(int i = 0; i<filas; i++){
-        m[i] = (int *)malloc(sizeof(int)*columnas);
+        m[i] = (int *)malloc(sizeof(int) * columnas);
     }
 
     //Pide el valor de cada elemnto de la matriz
