@@ -33,8 +33,14 @@ void ordenarArreglo(int arreglo[], int posiciones);
 
 /* 7 */
 int resuleveDesafioSiete(void);
-char * ingreso(void);
+char * ingresarFrase(void);
 char * invertirFrase(char * frase);
+
+/* 12 */
+int resuelveDesafioDoce(void);
+void desglosarFrase(char * frase);
+void mostrarPalabra(char palabra[]);
+void limpiarArreglo(char palabra[]);
 
 /* tools */
 void imprimirArreglo(int arreglo[], int length);
