@@ -19,18 +19,20 @@ Tales temas son, **gestión de memoria**, **punteros**, **estructuras**,… (con
 Dentro de nuestro curso nosotros habíamos visto una introducción en el primer semestre de la carrera, donde nos comentaron cuestiones básicas acerca de punteros. La idea de esta materia es ahondar más, para poder crear programas complejos que aprovechen el potencial de este tipo de especial de variable.
 
 Veamos rapidamente como estructuramos los temas en la materia con lo que respecta a **punteros**:
+
 **Introduccion**:
-	- Memeoria y puntero
-	- Operadores
-	- Punteros y arrays
+
+	- Memeoria y puntero,
+	- Operadores,
+	- Punteros y arrays,
 	- Aritmética de punteros
 
-**Avanzando**
-	- Punteros a punteros
-	- Arrays bidimencionales
-	- Pasaje por parametros
-	- Punteros a punteros de punteros...
-	- Punteros genéricos
+**Avanzando**:
+
+	- Punteros a punteros,
+	- Arrays bidimencionales,
+	- Pasaje por parametros,
+	- Punteros genéricos,
 	- Gestion de memoria dinamica
 
 ### - Estructuras
