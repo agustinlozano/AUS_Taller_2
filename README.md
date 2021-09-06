@@ -22,24 +22,24 @@ Una estructura (también llamada registro), es un tipo de dato que agrupa varios
 Se declaran con la palabra clave `struct`
 
 ```C
-	struct nombre {
-		char miembroChar;
-		double miembroDouble;
-		int miembroInt;
-	};
+struct nombre {
+	char miembroChar;
+	double miembroDouble;
+	int miembroInt;
+};
 ```
 Cada campo está formado por la declaración de una o más variables de otro tipo. Ejemplo:
 
 ```C
-	struct persona{
-		char nombre;
-		int edad;
-	};
+struct persona{
+	char nombre;
+	int edad;
+};
 ```
 Una vez definida la estructura se pueden declarar variables de ese tipo:
 
 ```C 
-	struct persona juan, maria;
+struct persona juan, maria;
 ```
 La asignación se hace mediante el operador dot "."
 
@@ -47,9 +47,10 @@ La asignación se hace mediante el operador dot "."
 
 ### - Estructuras y apuntadores
 Para acceder a una estructura mediante un apuntador se utiliza la siguiente notación:  
+
 ```C
-	(*estructura).miembro
-		/* o bien */
-	estructura -> miembro
+(*estructura).miembro
+    /* o bien */
+estructura -> miembro
 ```
 Es necesario crear mediante malloc la estructura antes de usarla.
