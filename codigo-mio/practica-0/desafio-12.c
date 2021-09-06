@@ -19,7 +19,7 @@ int resuelveDesafioDoce(void) {
 
 void desglosarFrase(char * frase) {
     char palabra[20];
-    int longitudFrase = (int)strlen(frase), contador = 0;
+    int longitudFrase = strlen(frase), contador = 0;
 
     printf("\nPalabras que correspnden a la frase ingresada:\n");
 
