@@ -5,7 +5,7 @@
 #include "desafios.h"
 #include <string.h>
 
-int resuleveDesafioSiete(void) {
+int resuelveDesafioSiete(void) {
     char *frase = ingresarFrase();
 
     if (frase == NULL) {
@@ -36,16 +36,15 @@ char * ingresarFrase(void) {
 }
 
 char * invertirFrase(char * frase) {
-    int longitudFrase = (int)strlen(frase);
+    int longitudFrase = strlen(frase);
     int posicion = 0;
 
-    char *fraseInvertida = (char *) malloc(longitudFrase);
+    char *fraseInvertida = (char *)malloc(longitudFrase);
 
     for (int i = longitudFrase; i >= 0; i--) {
         *(fraseInvertida + posicion) = *(frase + i);
 
         posicion++;
-        //printf("\n%c", *(frase + i));
     }
 
     printf("Frase invertida: %s\n", fraseInvertida); // <-- Esta linea no me muestra la frase cuando corro el programa
@@ -54,4 +53,3 @@ char * invertirFrase(char * frase) {
 
     return fraseInvertida;
 }
-
