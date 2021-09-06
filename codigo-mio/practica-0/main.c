@@ -13,7 +13,7 @@ int main(void)
     /* 5 */
     //resuelveDesafioSeis();
     /* 7 */
-    //resuleveDesafioSiete();
+    //resuelveDesafioSiete();
     /* 12 */
     resuelveDesafioDoce();
 

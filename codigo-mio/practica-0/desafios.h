@@ -32,7 +32,7 @@ void resuelveDesafioSeis(void);
 void ordenarArreglo(int arreglo[], int posiciones);
 
 /* 7 */
-int resuleveDesafioSiete(void);
+int resuelveDesafioSiete(void);
 char * ingresarFrase(void);
 char * invertirFrase(char * frase);
 
