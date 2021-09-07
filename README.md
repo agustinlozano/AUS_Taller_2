@@ -9,16 +9,20 @@
 
 ### [UNR](https://unr.edu.ar/) - [Instituto Politécnico Superior de Rosario](https://www.ips.edu.ar/).
 
-## Temas abordados - en construcción -
-Luego de habernos introducido al lenguaje mediante la programación imperativa procedural, en el semestre anterior, 
-comenzamos ahora en este nuevo curso a indagar en cuestiones mas profundas y complejas del lenguaje C. 
+## Teamatica y contenidos - en construcción -
+**Presentación**:
+Continuar con el aprendizaje de la programación procedural introducida con anterioridad en la asignatura Taller de Programación I dando un fuerte
+conocimientos en programación algorítmica, estructuras de datos complejas y el
+desarrollo de programas. Este nuevo curso servirá de guía en las bases, se pretende lograr independencia intelectual, formarlo en programación de alto nivel dotándolo con buenas prácticas y usos de la misma.
 
-Tales temas son, **gestión de memoria**, **punteros**, **estructuras**,… (continuar)
+**Contenidos mínimos**:
+Punteros, gestión de memoria, estructuras, implementación de algoritmos de recorrido, funciones de librerías, estructuramiento de programas complejos, manejo de archivos.
+
 
 ### - Punteros
 Dentro de nuestro curso nosotros habíamos visto una introducción en el primer semestre de la carrera, donde nos comentaron cuestiones básicas acerca de punteros. La idea de esta materia es ahondar más, para poder crear programas complejos que aprovechen el potencial de este tipo de especial de variable.
 
-Veamos rapidamente como estructuramos los temas en la materia con lo que respecta a **punteros**:
+Veamos rapidamente como estructuramos los temas en la materia con lo que respecta a ___punteros___:
 
 **Introduccion**:
 
