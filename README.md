@@ -9,7 +9,7 @@
 
 ### [UNR](https://unr.edu.ar/) - [Instituto Politécnico Superior de Rosario](https://www.ips.edu.ar/).
 
-## Teamatica y contenidos - en construcción -
+## Temática y contenidos - en construcción -
 **Presentación**:
 Continuar con el aprendizaje de la programación procedural introducida con anterioridad en la asignatura Taller de Programación I dando un fuerte
 conocimientos en programación algorítmica, estructuras de datos complejas y el
