@@ -80,6 +80,4 @@ void resuelveDesafioDos(void) {
     printf("\nPara el puntero pc su direccion es: %p", pc);
 
     printf("\nFin del prgrama.\n");
-
-    return EXIT_SUCCESS;
 }
