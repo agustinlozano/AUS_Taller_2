@@ -40,7 +40,22 @@ Veamos rapidamente como estructuramos los temas en la materia con lo que respect
 	- Gestion de memoria dinamica
 
 ### - Estructuras
-Una estructura (también llamada registro), es un tipo de dato que agrupa varios datos de tipo simple en un solo objeto.
+Una estructura (también llamada registro), es un tipo de dato que agrupa varios datos de tipo simple en un solo objeto. Las estructuras son __tipos de datos derivados__ - están construidos utilizando objetos de otros tipos.
+
+Veamos rapidamente como estructuramos los temas en la materia con lo que respecta a __estructuras__:
+
+	- Fundamento de estructuras,
+	- Estructuras y apuntadores,
+	- Funciones de tipo estructura,
+	- Funciones con parámetros de estructuras,
+	- Estructuras anidadas,
+	- Arreglos de estructuras,
+	- Uniones,
+	- Coordenadas rectangulares y polares,
+	- Distancia entre dos puntos,
+	- Calculos de distancia
+
+Ahora veremos un poco de código acerca de estructuras en C
 
 Se declaran con la palabra clave `struct`
 
