@@ -6,5 +6,7 @@ int main(void) {
     /* 3 */
     //resuelveDesafioTres();
     /* 4 */
-    resuelveDesafioCuatro();
+    //resuelveDesafioCuatro();
+    /* 5 */
+    resuelveDesafioCinco();
 }

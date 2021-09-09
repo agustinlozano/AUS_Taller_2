@@ -17,4 +17,9 @@ void mostrarEnOrdenDescendente(float *reales, int contador);
 void resuelveDesafioCuatro();
 char * obtener(int dia, char nombre[]);
 
+/* 5 */
+void resuelveDesafioCinco();
+void calcularImporte(float kilos, float precioPorKilo);
+float aplicarDescuento(float *importe);
+
 #endif
