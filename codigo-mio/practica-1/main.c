@@ -2,8 +2,7 @@
 
 int main(void) {
     /* 1 */
-    resuelveDesafioDos();
-
-    /* 2 */
+    //resuelveDesafioDos();
+    /* 3 */
     //resuelveDesafioTres();
 }
