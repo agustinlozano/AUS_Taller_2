@@ -11,20 +11,46 @@
 //FAlta: que el usuario ingrese los datos por teclado.
 
 void resuelveDesafioCinco() {
-    float kilosProducto = 50, precioPorKilo = 15.50;
+    float *pKilosProducto, *pPrecioKilo;
+    float kilos = 0, precioKilo = 0;
+    pKilosProducto = &kilos;
+    pPrecioKilo = &precioKilo;
 
-    calcularImporte(kilosProducto, precioPorKilo);
+    printf("\tGestion de compra\n");
+    obtenerDatos(pKilosProducto, pPrecioKilo);
+
+    printf("\nEl producto ingresado tiene un peso de %.1fkg,", kilos);
+    printf("\ny ademas posee un precio por kilo de $%.2f\n", precioKilo);
+    calcularImporte(kilos, precioKilo);
 }
 
-void calcularImporte(float kilosProfucto, float precioPorKilo) {
-    float valor = kilosProfucto * precioPorKilo;
+void obtenerDatos(float *pKilos, float *pPrecio) {
+    float kilos, precioKilo;
+
+    printf("\nIngresar los kilos del producto: ");
+    printf("\nSu respuesta: ");
+    scanf(" %f", &kilos);
+
+    printf("\nIngresar precio por kilo del producto: ");
+    printf("\nSu respuesta: ");
+    scanf(" %f", &precioKilo);
+
+    *pKilos = kilos;
+    *pPrecio = precioKilo;
+}
+
+void calcularImporte(float kilos, float precioKilo) {
+    float valor = kilos * precioKilo;
     float *importe = &valor;
 
     if (valor > 100) {
         aplicarDescuento(importe);
-    }
+        printf("\nFinalmente, el importe final corresponde a: $%.2f\n", *importe);
+    } else {
 
-    printf("\nEl importe correspondinte es: $%f", *importe);
+        printf("Finalmente, el importe final corresponde a: $%.2f\n", *importe);
+
+    }
 }
 
 float aplicarDescuento(float *importe) {
@@ -32,6 +58,8 @@ float aplicarDescuento(float *importe) {
     float descuento = (*importe * porcentaje) / 100;
 
     *importe = *importe - descuento;
+
+    printf("Se aplica un descuento del 10 porciento.\n");
 
     return *importe;
 }

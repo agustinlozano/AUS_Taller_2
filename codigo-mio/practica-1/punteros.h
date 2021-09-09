@@ -19,6 +19,7 @@ char * obtener(int dia, char nombre[]);
 
 /* 5 */
 void resuelveDesafioCinco();
+void obtenerDatos(float *kilos, float *precio);
 void calcularImporte(float kilos, float precioPorKilo);
 float aplicarDescuento(float *importe);
 
