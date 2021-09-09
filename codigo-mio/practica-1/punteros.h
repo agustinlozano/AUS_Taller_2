@@ -13,4 +13,8 @@ float * ingresarNumeros(int *indice);
 char ejecutarMenuSalida();
 void mostrarEnOrdenDescendente(float *reales, int contador);
 
+/* 4 */
+void resuelveDesafioCuatro();
+char * obtener(int dia, char nombre[]);
+
 #endif
