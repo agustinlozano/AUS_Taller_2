@@ -20,7 +20,7 @@ Punteros, gestión de memoria, estructuras, implementación de algoritmos de rec
 
 
 ### - Punteros
-Dentro de nuestro curso nosotros habíamos visto una introducción en el primer semestre de la carrera, donde nos comentaron cuestiones básicas acerca de punteros. La idea de esta materia es ahondar más, para poder crear programas complejos que aprovechen el potencial de este tipo de especial de variable.
+Dentro de nuestro curso nosotros habíamos visto una introducción en el primer semestre de la carrera, donde nos comentaron cuestiones básicas acerca de punteros. La idea de esta materia es ahondar más, para poder crear programas complejos que aprovechen el potencial de este tipo especial de variable.
 
 Veamos rapidamente como estructuramos los temas en la materia con lo que respecta a ___punteros___:
 
