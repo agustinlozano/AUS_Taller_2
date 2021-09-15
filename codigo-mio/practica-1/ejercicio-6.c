@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Escriba funciones que operen sobre cadenas de caracteres
-
-typedef enum { MAYUSCULAS, MINUSCULAS } mayMib;
+//Escriba las siguientes funciones que operen sobre cadenas de caracteres
 
 int strLargo(const char *origen);
 int strVacio(const char *origen);
@@ -14,71 +12,82 @@ void strDer(char *destino, const char *origen);
 void strAmbos(char *destino, const char *origen);
 
 int resuelveDesafioSeis(void) {
-    char *text1 = "Sera cierto?";
+    char *text = " Sera cierto? ";
+    printf("\nCadena original contiene: \"%s\"\n", text);
 
     //1
-    int largo = strLargo(text1);
-    printf("El largo de la cadena es: %d\n", largo);
+    int length = strLargo(text);
+    printf("\nEl largo de la cadena es: %d\n", length);
 
     //2
-    int strEstado = strVacio(text1);
-    if(strEstado == 0){
+    int strState = strVacio(text);
+    if(strState == 0){
         printf("El estado de la cadena es: vacio\n");
     } else {
-        printf("El estado de la cadena es: no vacio\n");
+        printf("\nEl estado de la cadena es: no vacio\n");
     }
 
     //3
-    char *textoDestino = (char *)malloc(largo);
+    char *textoDestino = (char *)malloc(length);
     if (textoDestino == NULL) {
         return EXIT_FAILURE;
     }
 
-    strCopia(textoDestino, text1);
-    printf("\nCadena destino contiene: %s", textoDestino);
+    strCopia(textoDestino, text);
+    printf("\nCadena copia contiene: \"%s\"\n", textoDestino);
 
     //4
-    char *cadenaInvertida = reverse(text1);
-    printf("\nCadena invertida: %s", cadenaInvertida);
+    //char *cadenaInvertida = reverse(text);
+    //printf("\nCadena invertida: %s", cadenaInvertida);
 
+    //5
+    char *textoDestino2 = (char *)malloc(length);
+    strIzq(textoDestino2, text);
+    printf("\nFrase sin espacios a la izquierda: \"%s\"\n", textoDestino2);
 
-    //char *result = (char *)malloc(largo);
-    //char *reves;
-    /*
-    if (result == NULL) {
-        return EXIT_FAILURE;
-    }
-    */
+    //6
+    char *textoDestino3 = (char *)malloc(length);
+    strDer(textoDestino3, text);
+    printf("\nFrase sin espacios a la derecha: \"%s\"\n", textoDestino3);
+
+    //7
+    char *textoDestino4 = (char *)malloc(length);
+    strAmbos(textoDestino4, text);
+    printf("\nFrase sin espacios en los extremos: \"%s\"\n", textoDestino4);
 
     free(textoDestino);
+    free(textoDestino2);
+    free(textoDestino3);
+    free(textoDestino4);
+
     return EXIT_SUCCESS;
 }
 
 int strLargo(const char *origen) {
-    int length, indice = 0;
-    char caracter = 'a';
+    int length, index = 0;
+    char character = 'a';
 
-    while(caracter != '\0'){
-        caracter = *(origen + indice);
-        indice++;
+    while(character != '\0'){
+        character = *(origen + index);
+        index++;
     }
 
-    length = indice - 1;
+    length = index - 1;
 
     return length;
 }
 
 int strVacio(const char *origen) {
-    int estado;
+    int state;
     int length = strLargo(origen);
 
     if(length == 0){
-        estado = length;
+        state = length;
     } else {
-        estado = 1;
+        state = 1;
     }
 
-    return estado;
+    return state;
 }
 
 void strCopia(char *destino, const char *origen) {
@@ -90,17 +99,50 @@ void strCopia(char *destino, const char *origen) {
 }
 
 char * reverse(char *string) {
-    int largo = strLargo(string);
-    int b = largo - 1;
+    int length = strLargo(string);
+    int b = length - 1;
 
     for(int a = 0; a != b; a++){
-        char temp = *(string + a);
+        char aux = *(string + a);
         *(string + a) = *(string + b);
-        *(string + b) = temp;
+        *(string + b) = aux;
         b--;
     }
 
-    printf("\nString invertido: %s, largo: %d", string, largo);
+    printf("\nString invertido: %s, largo: %d", string, length);
 
     return string;
+}
+
+void strIzq(char *destino, const char *origen) {
+    int firstPosition = 0;
+    char character = *(origen + firstPosition) ;
+
+    if(character == ' '){
+        int length = strLargo(origen);
+        for(int i = 0; i<length; i++){
+            *(destino + i) = *(origen + i+1);
+        }
+    } else {
+        printf("\nLa frase en cuestion no tiene un espacio al comienzo.\n");
+    }
+}
+
+void strDer(char *destino, const char *origen) {
+    int length = strLargo(origen) - 1;
+    char character;
+
+    while(character != ' '){
+        character = *(origen + length);
+        length--;
+    }
+
+    for(int i = 0; i <= length; i++){
+        *(destino + i) = *(origen + i);
+    }
+}
+
+void strAmbos(char *destino, const char *origen) {
+    strDer(destino, origen);
+    strIzq(destino, destino);
 }
