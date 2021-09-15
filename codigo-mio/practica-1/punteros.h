@@ -14,16 +14,19 @@ char ejecutarMenuSalida();
 void mostrarEnOrdenDescendente(float *reales, int contador);
 
 /* 4 */
-void resuelveDesafioCuatro();
+void resuelveDesafioCuatro(void);
 char * obtener(int dia, char nombre[]);
 
 /* 5 */
-void resuelveDesafioCinco();
+void resuelveDesafioCinco(void);
 void obtenerDatos(float *kilos, float *precio);
 void calcularImporte(float kilos, float precioPorKilo);
 float aplicarDescuento(float *importe);
 
 /* 6 */
-int resuelveDesafioSeis();
+int resuelveDesafioSeis(void);
+
+/* 7 */
+void resulveDesafioSiete(void);
 
 #endif

@@ -11,4 +11,6 @@ int main(void) {
     //resuelveDesafioCinco();
     /* 6 */
     resuelveDesafioSeis();
+    /* 7 */
+    //resulveDesafioSiete();
 }
