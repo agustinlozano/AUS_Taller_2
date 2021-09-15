@@ -23,4 +23,7 @@ void obtenerDatos(float *kilos, float *precio);
 void calcularImporte(float kilos, float precioPorKilo);
 float aplicarDescuento(float *importe);
 
+/* 6 */
+int resuelveDesafioSeis();
+
 #endif

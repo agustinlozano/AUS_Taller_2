@@ -8,5 +8,7 @@ int main(void) {
     /* 4 */
     //resuelveDesafioCuatro();
     /* 5 */
-    resuelveDesafioCinco();
+    //resuelveDesafioCinco();
+    /* 6 */
+    resuelveDesafioSeis();
 }
