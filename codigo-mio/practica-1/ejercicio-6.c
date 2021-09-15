@@ -6,26 +6,21 @@
 int strLargo(const char *origen);
 int strVacio(const char *origen);
 void strCopia(char *destino, const char *origen);
-char * reverse(char *string);
 void strIzq(char *destino, const char *origen);
 void strDer(char *destino, const char *origen);
 void strAmbos(char *destino, const char *origen);
+char * reverse(char *string);
 
 int resuelveDesafioSeis(void) {
     char *text = " Sera cierto? ";
-    printf("\nCadena original contiene: \"%s\"\n", text);
+    printf("Cadena original contiene: \"%s\"\n", text);
 
     //1
     int length = strLargo(text);
     printf("\nEl largo de la cadena es: %d\n", length);
 
     //2
-    int strState = strVacio(text);
-    if(strState == 0){
-        printf("El estado de la cadena es: vacio\n");
-    } else {
-        printf("\nEl estado de la cadena es: no vacio\n");
-    }
+    printf("\nEl estado de la cadena es: %s\n", (strVacio(text)? "no vacia" : "vacia"));
 
     //3
     char *textoDestino = (char *)malloc(length);
