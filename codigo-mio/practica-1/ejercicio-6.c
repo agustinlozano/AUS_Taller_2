@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "punteros.h"
 
 //Escriba las siguientes funciones que operen sobre cadenas de caracteres
 
