@@ -10,7 +10,7 @@ int main(void) {
     /* 5 */
     //resuelveDesafioCinco();
     /* 6 */
-    resuelveDesafioSeis();
+    //resuelveDesafioSeis();
     /* 7 */
-    //resulveDesafioSiete();
+    resuelveDesafioSiete();
 }

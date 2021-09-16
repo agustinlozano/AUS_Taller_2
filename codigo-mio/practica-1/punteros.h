@@ -27,6 +27,6 @@ float aplicarDescuento(float *importe);
 int resuelveDesafioSeis(void);
 
 /* 7 */
-void resulveDesafioSiete(void);
+int resuelveDesafioSiete(void);
 
 #endif
