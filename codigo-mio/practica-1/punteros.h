@@ -28,5 +28,7 @@ int resuelveDesafioSeis(void);
 
 /* 7 */
 int resuelveDesafioSiete(void);
+int getQuotient(int dividend, int divisor);
+char getHexDigit(int decDigit);
 
 #endif
