@@ -3,17 +3,17 @@
 #include <string.h>
 
 int main (void) {
-    char cadena[10] = "Agustin";
-    int longitud = strlen(cadena);
-    int a, b = longitud - 1;
+    char string[10] = "Agustin";
+    int length = strlen(string);
+    int a, b = length - 1;
 
     for(a = 0; a != b; a++){
-        char temp = cadena[a];
-        cadena[a] = cadena[b];
-        cadena[b] = temp;
+        char aux = string[a];
+        string[a] = string[b];
+        string[b] = aux;
         b--;
     }
 
-    printf("\n%s", cadena);
-    return  0;
+    printf("\n%s", string);
+    return EXIT_SUCCESS;
 }
