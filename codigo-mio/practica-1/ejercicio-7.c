@@ -11,10 +11,10 @@
 
 int * convertDecimalToOctal(int decimal, int *octal);
 char * convertDecimalToHexa(int decimal, char *hexa);
-int * convertDecimalToBinary(int decimal);
+int * convertDecimalToBinary(int decimal, int *binary);
 
 int resuelveDesafioSiete() {
-    int decimal = 99902303;
+    int decimal = 120;
 
     int *octalNum = (int *)malloc(MAX_DIGITS * sizeof(int));
     if(octalNum == NULL) {
@@ -23,6 +23,11 @@ int resuelveDesafioSiete() {
 
     char *hexaNum = (char *)calloc(MAX_DIGITS, sizeof(char));
     if(hexaNum == NULL) {
+        return EXIT_FAILURE;
+    }
+
+    int *binaryNum = (int *)malloc(MAX_DIGITS * sizeof(int));
+    if(binaryNum == NULL) {
         return EXIT_FAILURE;
     }
 
@@ -50,12 +55,54 @@ int resuelveDesafioSiete() {
     printf("\nEl numero corresponde en hexadecimal a: ");
     printf("%s\n", hexaNum);
 
-    printf("\nFin del programa.\n");
+    //3.    Binary
+    printf("\n\tEnteros positivos en binario");
+    convertDecimalToBinary(decimal, binaryNum);
+
+
+    printf("\n\nFin del programa.\n");
 
     free(octalNum);
     free(hexaNum);
+    free(binaryNum);
 
     return EXIT_SUCCESS;
+}
+
+int * convertDecimalToBinary(int decimalNum, int *binaryNum) {
+    int dividend, remain, quotient = 0, index = 0, base = 2;
+
+    dividend = decimalNum;
+
+    while(quotient != 1){
+        quotient = getQuotient(dividend, base);
+
+        remain = dividend - (quotient * base);
+        *(binaryNum + index) = remain;
+        index++;
+
+        dividend = quotient;
+    }
+
+    remain = quotient;
+    *(binaryNum + index) = remain;
+
+    int length = index;
+    int a, b = length;
+
+    for(a = 0; a <= b ; a++){
+        char aux = binaryNum[a];
+        binaryNum[a] = binaryNum[b];
+        binaryNum[b] = aux;
+        b--;
+    }
+
+    printf("\nEl numero corresponde en binario a: ");
+    for(int i = 0; i <= index; i++){
+        printf("%d", binaryNum[i]);
+    }
+
+    return binaryNum;
 }
 
 int * convertDecimalToOctal(int decimal, int *octalNum) {
@@ -96,7 +143,6 @@ char * convertDecimalToHexa(int decimalNum, char *hexaNum) {
         index++;
 
         if(quotient < base){
-        //ultimo digito que pasar a base 16
             decDigit = quotient;
             hexDigit = getHexDigit(decDigit);
             hexaNum[index] = hexDigit;
@@ -182,3 +228,4 @@ char getHexDigit(int decDigit) {
     }
     return hexDigit;
 }
+
