@@ -11,7 +11,7 @@ void strAmbos(char *destino, const char *origen);
 char * reverse(char *string);
 
 int resuelveDesafioSeis(void) {
-    char *text = " Sera cierto? ";
+    char *text = " Sera cierto?    ";
     printf("Cadena original contiene: \"%s\"\n", text);
 
     //1
@@ -55,6 +55,20 @@ int resuelveDesafioSeis(void) {
     free(textoDestino4);
 
     return EXIT_SUCCESS;
+}
+
+void strDer(char *destino, const char *origen) {
+    int length = strLargo(origen) - 1;
+    char character = ' ';
+
+    while(character == ' '){
+        character = *(origen + length);
+        length--;
+    }
+
+    for(int i = 0; i <= length; i++){
+        *(destino + i) = *(origen + i);
+    }
 }
 
 int strLargo(const char *origen) {
@@ -119,20 +133,6 @@ void strIzq(char *destino, const char *origen) {
         }
     } else {
         printf("\nLa frase en cuestion no tiene un espacio al comienzo.\n");
-    }
-}
-
-void strDer(char *destino, const char *origen) {
-    int length = strLargo(origen) - 1;
-    char character;
-
-    while(character == ' '){
-        character = *(origen + length);
-        length--;
-    }
-
-    for(int i = 0; i < length; i++){
-        *(destino + i) = *(origen + i);
     }
 }
 
