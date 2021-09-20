@@ -126,12 +126,12 @@ void strDer(char *destino, const char *origen) {
     int length = strLargo(origen) - 1;
     char character;
 
-    while(character != ' '){
+    while(character == ' '){
         character = *(origen + length);
         length--;
     }
 
-    for(int i = 0; i <= length; i++){
+    for(int i = 0; i < length; i++){
         *(destino + i) = *(origen + i);
     }
 }
