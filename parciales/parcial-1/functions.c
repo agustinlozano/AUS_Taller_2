@@ -22,3 +22,24 @@ char * eco(const char *str) {
     return ecoString;
 }
 
+void elimSFinales(char *str) {
+    int length = strlen(str);
+    char strResutl[length];
+
+    int index = 0;
+    for(int i = 0; i <= length; i++){
+        char character = str[i];
+
+        if(character == 's' && str[i+1] == ' '){
+            continue;
+        }else if(i == length-1 && character == 's'){
+            continue;
+        }else if(i == length) {
+            strResutl[index] = '\0';
+        }else{
+            strResutl[index++] = character;
+        }
+    }
+
+    printf("Cadena resultante: %s\n", strResutl);
+}

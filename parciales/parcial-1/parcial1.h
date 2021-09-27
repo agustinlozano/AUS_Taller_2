@@ -10,7 +10,7 @@
 char * eco(const char * str);
 
 /* 2 */
-
+void elimSFinales(char * str);
 
 /* 3 */
 
