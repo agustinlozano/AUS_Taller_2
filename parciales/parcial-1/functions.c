@@ -43,3 +43,28 @@ void elimSFinales(char *str) {
 
     printf("Cadena resultante: %s\n", strResutl);
 }
+
+int ** crearMatriz(int col, int rows){
+    //Creamos la matriz
+    int **m = (int **)malloc(rows * sizeof(int *));
+    for(int i = 0; i < rows; i++){
+        m[i] = (int *)malloc(col * sizeof(int));
+    }
+
+    //Llenamos la matriz
+    for(int i = 0; i < rows; i++){
+        for(int j = 0; j < col; j++){
+            m[i][j] = i+j;
+        }
+    }
+
+    //Mostrar matriz resultante
+    for(int i = 0; i < rows; i++) {
+        for(int j = 0; j < col; j++) {
+            printf("%d\t", m[i][j]);
+        }
+        printf("\n");
+    }
+
+    return m;
+}

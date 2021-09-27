@@ -13,5 +13,6 @@ char * eco(const char * str);
 void elimSFinales(char * str);
 
 /* 3 */
+int ** crearMatriz(int col, int rows);
 
 #endif
