@@ -7,12 +7,12 @@ char * eco(const char *str){
 
     char finalChar = str[length-1];
 
-    for(int i = 0; i <= length+4; i++){
+    for(int i = 0; i <= length+ECO; i++){
         ecoString[i] = str[i];
-        if(i >= length && i < length+4){
+        if(i >= length && i < length+ECO){
             ecoString[i] = finalChar;
 
-        }else if (i == length+4){
+        }else if (i == length+ECO){
             ecoString[i] = '\0';
         }else {
             ecoString[i] = str[i];
@@ -79,7 +79,7 @@ char ** crearMatrizChar(int col, int rows, int **matrizInt) {
     //LLenamos la matriz utilizando los valores de matrizInt
     for(int i = 0; i < rows; i++){
         for(int j = 0; j < col; j++){
-            matrizChar[i][j] = 48 + matrizInt[i][j];
+            matrizChar[i][j] = matrizInt[i][j] + POSICIONES_ASCII;
         }
     }
 

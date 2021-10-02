@@ -4,7 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MACRO
+#define ECO 4
+#define POSICIONES_ASCII 48
 
 /* 1 */
 char * eco(const char * str);

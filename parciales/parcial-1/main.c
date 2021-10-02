@@ -24,7 +24,6 @@ int main(void) {
     int col = 3;
     matrizInt = crearMatriz(col, rows);
 
-    //Segunda parte
     printf("\nSeguda parte: matriz de char a partir de la matriz entera\n");
     matrizChar = crearMatrizChar(col, rows, matrizInt);
 
