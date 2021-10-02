@@ -14,5 +14,6 @@ void elimSFinales(char * str);
 
 /* 3 */
 int ** crearMatriz(int col, int rows);
+char ** crearMatrizChar(int col, int rows, int **matrizInt);
 
 #endif

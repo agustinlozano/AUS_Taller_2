@@ -3,7 +3,8 @@
 int main(void) {
     char *string1 = "Barad Dur";
     char *string2 = "The perfects elves";
-    int **m = NULL;
+    int **matrizInt = NULL;
+    char **matrizChar = NULL;
 
     /* 1.- Definir una funcion eco */
     printf("\tEjercicio 1\n");
@@ -18,15 +19,25 @@ int main(void) {
 
     /* 3.- Definir una funcion crear matriz */
     printf("\n\tEjercicio 3\n");
+    printf("Primera parte: crear un matriz entera 4x3\n");
     int rows = 4;
     int col = 3;
-    m = crearMatriz(col, rows);
+    matrizInt = crearMatriz(col, rows);
 
-    //Liberar memoria
+    //Segunda parte
+    printf("\nSeguda parte: matriz de char a partir de la matriz entera\n");
+    matrizChar = crearMatrizChar(col, rows, matrizInt);
+
+    //Zona liberar memoria
     for(int i = 0; i < col; i++){
-        free(m[i]);
+        free(matrizInt[i]);
     }
-    free(m);
+    free(matrizInt);
+
+    for(int i = 0; i < col; i++){
+        free(matrizChar[i]);
+    }
+    free(matrizChar);
 
     free(string1);
     return EXIT_SUCCESS;
