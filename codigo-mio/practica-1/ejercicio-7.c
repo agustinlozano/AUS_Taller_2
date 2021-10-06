@@ -4,9 +4,9 @@
 
 #define MAX_DIGITS 10
 
-/* 7) Escribir una funci�n que reciba como argumento un entero y retorne una cadena de
-    caracteres en su representaci�n decimal. �dem para: representaci�n octal,
-    hexadecimal y binaria (genere una funci�n por cada una de estas opciones).
+/* 7) Escribir una funcion que reciba como argumento un entero y retorne una cadena de
+    caracteres en su representacion decimal. idem para: representacion octal,
+    hexadecimal y binaria (genere una funcion por cada una de estas opciones).
 */
 
 int * convertDecimalToOctal(int decimal, int *octal);
@@ -228,4 +228,3 @@ char getHexDigit(int decDigit) {
     }
     return hexDigit;
 }
-
