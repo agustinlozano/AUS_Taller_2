@@ -31,4 +31,8 @@ int resuelveDesafioSiete(void);
 int getQuotient(int dividend, int divisor);
 char getHexDigit(int decDigit);
 
+/* 9 */
+void resuelveDesafioNueve(void);
+int ** crearMatrizIdentidad(int n);
+
 #endif
