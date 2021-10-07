@@ -55,7 +55,7 @@ void imprimeTiempo(Tiempo t) {
 }
 
 void ordenarAlfa(Archivo *lista, int n) {
-    char *ordenedList[3];
+    char *ordenedList[n];
 
     for(int i = 0; i < n; i++){
         ordenedList[i] = lista[i].nombre;
