@@ -15,26 +15,26 @@ int comparaTiempos(Tiempo *t1, Tiempo *t2){
         mes2 = t2 -> mes;
 
         if(mes1 == mes2){
-            int hora1, hora2;
+            int day1, day2;
 
-            hora1 = t1 -> hora;
-            hora2 = t1 -> hora;
+            day1 = t1 -> dia;
+            day2 = t1 -> dia;
 
-            if(hora1 == hora2){
+            if(day1 == day2){
                 return 0;
-            }else if(hora1 < hora2){
+            }else if(day1 > day2){
                 resultado = 1;
             }else{
                 resultado = -1;
             }
 
-        }else if(mes1 < mes2){
+        }else if(mes1 > mes2){
             resultado = 1;
         }else{
             resultado = -1;
         }
 
-    }else if(anio1 < anio2){
+    }else if(anio1 > anio2){
         resultado = 1;
     }else{
         resultado = -1;
@@ -55,21 +55,55 @@ void imprimeTiempo(Tiempo t) {
 }
 
 void ordenarAlfa(Archivo *lista, int n) {
+    char *ordenedList[3];
+
+    for(int i = 0; i < n; i++){
+        ordenedList[i] = lista[i].nombre;
+    }
 
     for(int i = 1; i < n; i++){
         for(int j = 0; j < n-i; j++){
-            char *str1 = lista[j].nombre;
-            char *str2 = lista[j+1].nombre;
+            char *str1 = ordenedList[j];
+            char *str2 = ordenedList[j+1];
 
             if(strcmp(str1, str2) > 0){  //Si (str1 > str2)
                 char *tmp = str1;
-                lista[j].nombre = str2;
-                lista[j+1].nombre = tmp;
+                ordenedList[j] = str2;
+                ordenedList[j+1] = tmp;
             }
         }
     }
+
+    printf("\nLista ordenada de nombres");
+    for(int i = 0; i < n; i++){
+        printf("\n%s", ordenedList[i]);
+    }
+    printf("\n");
 }
 
 void ordenaTemporal(Archivo *lista, int n) {
+    Tiempo ordenedDates[n];
 
+    for(int i = 0; i < n; i++){
+        ordenedDates[i] = lista[i].ultimaMod;
+    }
+
+    for(int i = 1; i < n; i++){
+        for(int j = 0; j < n-i; j++){
+            Tiempo date1 = ordenedDates[j];
+            Tiempo date2 = ordenedDates[j+1];
+
+            if(comparaTiempos(&date1, &date2) > 0){  //Si (date1 > date2)
+                Tiempo tmp = date1;
+                ordenedDates[j] = date2;
+                ordenedDates[j+1] = tmp;
+            }
+        }
+    }
+
+    printf("\nLista ordenada de fechas");
+    for(int i = 0; i < n; i++){
+        imprimeTiempo(ordenedDates[i]);
+    }
+    printf("\n");
 }

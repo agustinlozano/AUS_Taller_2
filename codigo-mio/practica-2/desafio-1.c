@@ -4,6 +4,8 @@ void resuelveDesafioUno(void) {
     Tiempo t1, t2, t3;
     Archivo a1, a2, a3;
 
+    printf("Deafio numero uno: listas de estructuras de archivos\n");
+
     //Rellenar los tiempos
     t1.anio = 2021;
     t1.mes = 3;
@@ -40,15 +42,20 @@ void resuelveDesafioUno(void) {
     int lengthL = 3;
     Archivo lista[3] = {a3, a2, a1};
 
+    //Imprimir la lista
+    printf("\nLa lista de archivos inicializada contiene:");
+    for(int i = 0; i < lengthL; i++){
+        printf("\nPosicion %d:", i);
+        printf("\nNombre: %s", lista[i].nombre);
+        imprimeTiempo(lista[i].ultimaMod);
+        printf("\n");
+    }
+    printf("\n");
+
     //llamada a la funcion ordena alfa
     ordenarAlfa(lista, lengthL);
 
-    //Llamada a funcion comparar tiempo
-    //comparaTiempos(&t1, &t2);
-
-    //Llama a la funcion imprimir tiempo
-    //imprimeTiempo(t2);
-
-    //printf("\nEstado: %d", estadoComparacion);
+    //Llama a la funcion ordena temporal
+    ordenaTemporal(lista, lengthL);
 }
 

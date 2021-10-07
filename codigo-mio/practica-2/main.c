@@ -2,8 +2,6 @@
 
 int main()
 {
-    printf("Hello world!\n");
-
     resuelveDesafioUno();
 
     return EXIT_SUCCESS;
