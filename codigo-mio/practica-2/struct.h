@@ -6,8 +6,13 @@
 
 /* Estructura 1 */
 typedef struct tiempo{
-int anio, mes, dia, hora, minuto, segundo;
+    int anio, mes, dia, hora, minuto, segundo;
 } Tiempo;
+
+typedef struct archivo{
+    char *nombre;
+    Tiempo ultimaMod;
+} Archivo;
 
 /* Estructura 2 */
 
@@ -16,7 +21,10 @@ int anio, mes, dia, hora, minuto, segundo;
 /* Funciones */
 /* 1 */
 void resuelveDesafioUno(void);
-
+int comparaTiempos(Tiempo *t1, Tiempo *t2);
+void imprimeTiempo(Tiempo t);
+void ordenarAlfa(Archivo *lista, int n);
+void ordenaTemporal(Archivo *lista, int n);
 
 /* 2 */
 
