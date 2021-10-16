@@ -15,7 +15,10 @@ typedef struct archivo{
 } Archivo;
 
 /* Estructura 2 */
-
+typedef struct polinomio{
+    int n;
+    double *coeficiente;
+} Polinomio;
 
 
 /* Funciones */
@@ -27,6 +30,7 @@ void ordenarAlfa(Archivo *lista, int n);
 void ordenaTemporal(Archivo *lista, int n);
 
 /* 2 */
-
+void resuelveDesafioDos(void);
+Polinomio * creaPolinomio(int orden);
 
 #endif
