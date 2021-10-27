@@ -17,4 +17,6 @@ struct movie * search(struct movie *top, char *n){
             p = p -> next;
         }
     }
+
+    return p;
 }

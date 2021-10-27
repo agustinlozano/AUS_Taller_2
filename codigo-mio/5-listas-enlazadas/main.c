@@ -6,13 +6,17 @@ int main(void){
     struct movie *top = NULL;
     struct movie *m1 = (struct movie *)malloc(sizeof(struct movie));
     struct movie *m2 = (struct movie *)malloc(sizeof(struct movie));
+    
+    char *movieName1 = "The lord of the rings: Return of the king";
+    char *movieName2 = "Star Wars: The revenge of the Sith";
+    struct movie *nodoBuscado;
 
     /* relleno los datos de mis peliculas */
-    m1 -> name = "The lord of the rings: Return of the king";
+    m1 -> name = movieName1;
     m1 -> genre = "Epic fantasy";
     m1 -> lunchYear = 2003;
 
-    m2 -> name = "Star Wars: The revenge of the Sith";
+    m2 -> name = movieName2;
     m2 -> genre = "Epic space-opera";
     m2 -> lunchYear = 2005;
 
@@ -25,19 +29,21 @@ int main(void){
 
         switch(respuesta){
             case 1:
-                top = store(top, m1);
+                top = store(top, m2);
                 break;
             case 2:
-                top = store(top, m2);
+                top = insert(top, m1);
                 break;
             case 3:
                 toList(top);
                 break;
             case 4:
-                //search()
+                nodoBuscado = search(top, movieName1);
+                printf("\nElemento encontrado: %s\n", nodoBuscado -> name);
                 break;
             case 5:
-                //delete();
+                top = delete(top, movieName1);
+                top = delete(top, movieName2);
                 break;
             case 6:
                 respuesta = 0;
@@ -47,9 +53,5 @@ int main(void){
         }
     }
 
-    // printf("\nLista de peliculas!");
-    // printf("\nNombre: %s, genero: %s, anio de lanzamiento: %d\n", lista -> name, lista -> genre, lista -> lunchYear);
-    // printf("\nNombre: %s, genero: %s, anio de lanzamiento: %d\n", lista -> name, lista -> genre, lista -> lunchYear);
-    
     return EXIT_SUCCESS;
 }
