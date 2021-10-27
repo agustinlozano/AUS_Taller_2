@@ -16,7 +16,7 @@ struct movie * store(struct movie *top, struct movie *new){
     
     if(top == NULL){ return new; }              /* si no exite lista la crea */
 
-    while(last != NULL){                        /* hasta el ultimo elemento */
+    while(last -> next){                        /* hasta el ultimo elemento */
         last = last -> next; 
     }
                                                 /* ahora next apunta al ultimo elemento */

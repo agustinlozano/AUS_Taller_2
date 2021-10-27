@@ -28,7 +28,7 @@ int main(void){
                 top = store(top, m1);
                 break;
             case 2:
-                top = insert(top, m2);
+                top = store(top, m2);
                 break;
             case 3:
                 toList(top);
