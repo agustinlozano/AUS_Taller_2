@@ -6,7 +6,6 @@ int main(void){
     struct movie *top = NULL;
     struct movie *m1 = (struct movie *)malloc(sizeof(struct movie));
     struct movie *m2 = (struct movie *)malloc(sizeof(struct movie));
-    struct movie *lista;
 
     /* relleno los datos de mis peliculas */
     m1 -> name = "The lord of the rings: Return of the king";
@@ -26,10 +25,10 @@ int main(void){
 
         switch(respuesta){
             case 1:
-                lista = store(top, m1);
+                top = store(top, m1);
                 break;
             case 2:
-                lista = insert(top, m2);
+                top = insert(top, m2);
                 break;
             case 3:
                 toList(top);
@@ -52,7 +51,5 @@ int main(void){
     // printf("\nNombre: %s, genero: %s, anio de lanzamiento: %d\n", lista -> name, lista -> genre, lista -> lunchYear);
     // printf("\nNombre: %s, genero: %s, anio de lanzamiento: %d\n", lista -> name, lista -> genre, lista -> lunchYear);
     
-    printf("\nDireccion del siguiente nodo: %p\n", lista);
-
     return EXIT_SUCCESS;
 }
