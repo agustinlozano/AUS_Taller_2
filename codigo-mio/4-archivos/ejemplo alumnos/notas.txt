@@ -1,0 +1,3 @@
+Juan        Perez         75 62
+Erica       Molina        100 68
+Patricio    Escobar       35 80
